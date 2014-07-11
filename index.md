@@ -5,7 +5,9 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-{% include README.md %}
+<div style="text-align: right; font-size: 80%; font-style: italic;">Початковий варіант: Дмитро Ковальов, липень 2014</div>
+
+Що це таке?
 
 Це - документація і інструкції для початківців. В основному для непрограмістів. 
 
