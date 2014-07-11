@@ -11,11 +11,11 @@ tagline: Supporting tagline
 
 Це - документація і інструкції для початківців. В основному для непрограмістів. 
 
-Група в Github створена для підтримки проектів громади українців у Японії "Краяни" Тут будуть публікуватися всі проекти, присвячені цьому.
+[Група в Github](https://github.com/Kraiany/) створена для підтримки проектів громади українців у Японії "Краяни" Тут будуть публікуватися всі проекти, присвячені цьому.
 
 Проекти розрозблюються на принципах OpenSource (програми з відкритим кодом), будуть використовуватися безкоштовні, та відкриті засоби. Перелік засобів буде змінюватися з часом, але на час написання планується використовувати:
 
-- Git
+- Git (або ґіт)
 - Github
 - Jekyll
 - Bootstrap 3
@@ -37,10 +37,10 @@ Git - це система керування розподіленими репо
 
 Опис орієнтований більше на програмістів, але в першій частині, дуже доступно описує нащо взагалі Ґіт потрібен, і як це все працює. Для початківця, не звиклих працювати з командним рядком знадобляться GUI клієнти:
 
-- [Github для Windows](https://windows.github.com/)
-  - [допоміжні статті](https://help.github.com/categories/58/articles)
-- [Github для Mac](https://mac.github.com/)
-  - [допоміжні статті](https://help.github.com/categories/31/articles)
+- Вивантажити [Github для Windows](https://windows.github.com/) 
+  - читати [допоміжні статті](https://help.github.com/categories/58/articles)
+- Вивантажити [Github для Mac](https://mac.github.com/)
+  - читати [допоміжні статті](https://help.github.com/categories/31/articles)
 
 Хоча ґіт і спроектований в першу чергу для програмістів, тим не менше ним можуть користуватися і не дуже обізнані з програмування люди. Завдяки деяким інструментам, про які ідеться далі.
 
@@ -58,53 +58,16 @@ Github - це організація, присвячена програмам з
 
 ### Мої перші кроки
 
-Все це добре, але що я маю робити з самого початку?
+Все це добре, але що я маю робити з самого початку? Список кроків:
 
-Github має розділ статей для початківців (англійською) присвячених [саме початку роботи](https://help.github.com/categories/53/articles)
+- створити рахунок на Ґітхабі
+- встановити email в ґіт'і
+- встановити ім'я в ґіт'і
+
+В подробицях ці кроки описані в розділі статей для початківців (англійською) присвячених [саме початку роботи](https://help.github.com/categories/53/articles) з Ґітхабом. 
+
+Для більш детального знайомства з ґітом знадобляться [ці статті](https://help.github.com/categories/54/articles) а також довший [список ресурсів](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github) для вивчення Ґіт та Ґіхаб.
 
 
-http://jekyllthemes.org/
-http://jekyllbootstrap3.tk/preview/
-
-https://help.github.com/categories/54/articles
-https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github
-
-
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
-
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/dbtek/jekyll-bootstrap-3)!
 
 
