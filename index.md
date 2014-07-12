@@ -68,6 +68,7 @@ Github - це організація, присвячена програмам з
 
 Для більш детального знайомства з ґітом знадобляться [ці статті](https://help.github.com/categories/54/articles) а також довший [список ресурсів](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github) для вивчення Ґіт та Ґіхаб.
 
+... далі буде ...
 
 
 
