@@ -7,15 +7,6 @@ startpack
 Документація і інструкції для початківців. В основному для непрограмістів.
 
 
-Що таке Git та Github
-============================================
+Інформація знаходиться за адресою
 
-
-Що таке Git
-----------------------
-
-http://www.vitaliypodoba.com/2014/06/git-basics/
-
-
-Що таке Github
-----------------------
+[http://kraiany.github.io/startpack](http://kraiany.github.io/startpack)
