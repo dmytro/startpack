@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Git та Github</title><link type="image/png" href="favicon.png" rel="icon" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="" name="description" /><meta content="Kraiany" name="author" /><link href="../assets/stylesheets/all-35035ad6.css" media="screen" rel="stylesheet" type="text/css" /><link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700&subset=cyrillic-ext,latin" rel="stylesheet" type="text/css" /><link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,900,900italic&subset=cyrillic-ext,latin" rel="stylesheet" type="text/css" /></head><body><div class="container-narrow"><div class="content"><h1>Як мати власну веб сторінку на Ґітхабі?</h1><div class="row-fluid"><header class="well well-black col-md-3"><h2>Навігація</h2><ul><li><a class="btn btn-raised btn-material-red-800" href="index.html">Що це таке?</a></li><li><a class="btn btn-raised btn-material-red-800" href="git_github">Git та Github</a></li><li><a class="btn btn-raised btn-material-red-800" href="static_or">Статична сторінка?</a></li></ul></header><section class="col-md-6"><h1 id="Що-таке-git-та-github">Що таке Git та Github</h1>
+
+<p>Дві основні складові на вершині списку, це Git та Github.</p>
+
+<h2 id="Що-таке-git-">Що таке <code>git</code> </h2>
+
+<p><code>git</code> (або Ґіт) — це програма, що належить до класу так званих Систем Керування Версіями,  тут і далі «СКВ» (англ. VCS - Versions Control System). Є багато різних типів СКВ, на яких ми не будемо детально зупинятися, оскільки цьому присвячено багато інформації в інтернеті. </p>
+
+<p><code>git</code> був розроблений засновником Лінакса Лінасом Торвальдсом для керування кодами ядра. Ця система стала дуже популярною в останні роки завдяки гнучкості, і не в останню чергу завдяки існуванню такого веб-ресурсу, як <a href="http://github.com">Github</a>.</p>
+
+<p>Кожна СКВ від самої найпростішої до найсучаснішої і до найбільш навороченої забезпечує кілька основих функцій: </p>
+
+<ul>
+<li>дозволяє зберігати версії документів (коли це стосується програмування програм),</li>
+<li>дозволяє повертатися (<code>rollback</code>, <code>reset</code>) за необхідності (якщо, наприклад, щось не так спрацювало або внесені помилки) до попередньої версії документа,</li>
+<li>дозволяє подивитися різницю (<code>diff</code>) між поточною версією (чи робочою версією) документа і попереднью (попередніми) версією документа, чи різницю між двома (інколи трьома чи більше) попередніми версіями,
+створювати гілки (<code>branch</code>) в процесі розробки, коли один чи декілька розробників працюють незалежно від інших над певною функцією,</li>
+<li>та дозволяє зливати (з’єднувати, <code>merge</code>) відокремлені гілки в основне «дерево» документа, враховуючи при цьому як зміни зроблені у відокремленій гілці, так і зміни в основному «дереві». </li>
+</ul>
+
+<p><code>git</code> також належить до розподілених (distributed) СКВ. Це означає, що будь яка копія центрального репозиторія є повновісним репозиторієм сама по собі. Ці властивості роблять <code>git</code> одним з найпопулярніших на сьогоднішній день СКВ. </p>
+
+<p>Добрий опис того, що таке <code>git</code> українською мовою є <a href="http://www.vitaliypodoba.com/2014/06/git-basics/">ось тут</a></p>
+
+<p>Опис орієнтований більше на програмістів, але в першій частині, дуже доступно описує нащо взагалі Ґіт потрібен, і як це все працює. </p>
+
+<p>Хоча ґіт і спроектований в першу чергу для програмістів, тим не менше ним можуть користуватися і не дуже обізнані з програмування люди. Завдяки деяким інструментам, про які ідеться далі.</p>
+
+<h2 id="Що-таке-github">Що таке Github</h2>
+
+<p>Github - це організація, побудована «навколо» <code>git</code>. Робота компанії присвячена підтримці програм на платформі <code>git</code>. В безкоштовній версії підтримуються проекти з відкритим кодом. Закриті проекти також можливі, але за окрему плату. </p>
+
+<p>Всі проекти якої базуються на <code>git</code> репозиторіях і зберігаються на серверах github&#39;у. Додатково до простого зберігання репозиторіїв і доступу до них Github надає додаткові послуги для проектів та організацій:</p>
+
+<ul>
+<li>вікі для документації;</li>
+<li>публікацію веб-сторінок проектів (яку саме зараз ви читаєте);</li>
+<li>систему відслідковування помилок (issue tracking);</li>
+<li>систему pull requests, та пов&#39;язану з ними систему перегляду та коментування змін коду.</li>
+</ul>
+
+<h3 id="Де-взяти-програми">Де взяти програми</h3>
+
+<p>Для початківця, не звиклих працювати з командним рядком знадобляться GUI клієнти:</p>
+
+<ul>
+<li>Вивантажити <a href="https://windows.github.com/">Github для Windows</a>
+
+<ul>
+<li>читати <a href="https://help.github.com/categories/58/articles">допоміжні статті</a></li>
+</ul></li>
+<li>Вивантажити <a href="https://mac.github.com/">Github для Mac</a>
+
+<ul>
+<li>читати <a href="https://help.github.com/categories/31/articles">допоміжні статті</a></li>
+</ul></li>
+</ul>
+</section></div></div><hr><footer><p><small>Hosted on<a href="http://pages.github.com/"> GitHub Pages</a> using the<a href="https://github.com/FezVrasta/bootstrap-material-design"> Material Design</a> for<a href="http://getbootstrap.com/"> Bootstrap</a></small></p></footer><script src="../assets/javascripts/all-ccaaadd2.js" type="text/javascript"></script></hr></div></body></html><a class="btn btn-fab btn-material-red-800 btn-raised" href="#" id="toTop"><i class="mdi-action-home"></i></a>
