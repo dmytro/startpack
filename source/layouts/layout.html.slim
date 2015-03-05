@@ -16,15 +16,21 @@ html[lang="en"]
     .container-narrow
       .content
         h1 Як мати власну веб сторінку на Ґітхабі?
-        .row-fluid
+        .row
           header.well.well-black.col-md-3
             = partial :navigation
           section.col-md-6
             = partial :toc
             = yield
-      hr
-        = partial :footer
-        = javascript_include_tag "all.js"
+          .col-md-3
+            | &nbsp;
 
-a.btn.btn-fab.btn-material-red-800.btn-raised#toTop href="#"
-  i.mdi-action-home
+    footer.container-narrow
+      .content
+        .row
+          .col-md-3.col-md-offset-8
+            = partial :footer
+
+    a.btn.btn-fab.btn-material-red-800.btn-raised#toTop href="#"
+      i.mdi-action-home
+  = javascript_include_tag "all.js"
