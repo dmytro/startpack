@@ -57,6 +57,18 @@ section{
 	    border-bottom: 1px solid #ccc;
 	    padding-bottom: 5px;
     }
+    ul.nav.toc {
+        h5 {
+            font-weight: bold;
+            color: rgba(187, 0,0, 0.7);
+        }
+        a {
+            padding: 0 10px;
+        }
+        hr {
+            size: 1px;
+        }
+    }
 
 }
 

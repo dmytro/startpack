@@ -19,6 +19,18 @@ activate :livereload
 activate :directory_indexes
 
 
+helpers do
+  def chapters( post )
+    File.readlines( post.source_file ).collect do |x|
+      if x =~ /^\#{1,6}\s(.*)/
+        $1
+      else
+        nil
+      end
+    end.select { |x| x }
+  end
+end
+
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
 set :markdown_engine, :redcarpet
 
