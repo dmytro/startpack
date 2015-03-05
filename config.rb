@@ -18,21 +18,23 @@ activate :livereload
 
 activate :directory_indexes
 
-# page '/', layout: 'layout'
 
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
 set :markdown_engine, :redcarpet
 
 configure :development do
+  set :base, ""
   activate :relative_assets
 end
 
 configure :build do
+  set :base, "/startpack"
   activate :relative_assets
   # activate :directory_indexes
   activate :sprockets
   activate :minify_css
   activate :minify_javascript
+  set :relative_links, true
   # somehow minifying html takes some html attributes away so it is causing
   # some css not applied to certain elements... so until we find alternative
   # way to monify html, we will disable this
