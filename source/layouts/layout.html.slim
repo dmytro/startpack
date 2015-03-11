@@ -17,6 +17,8 @@ html[lang="en"]
       .content
         h1 Як мати власну веб сторінку на Ґітхабі?
         .row
+          - if current_page.data.title
+            h2= current_page.data.title
           header.well.well-black.col-md-3
             = partial :navigation
           section.col-md-6
