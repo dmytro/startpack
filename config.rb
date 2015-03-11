@@ -29,6 +29,23 @@ helpers do
       end
     end.select { |x| x }
   end
+
+  def button(href,text,size='dummy')
+    "<a class='btn btn-#{size} btn-raised btn-material-red-800' href='#{base}/#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
+  end
+
+  def button_l(*params)
+    button(*params, "lg")
+  end
+
+  def button_s(*params)
+    button(*params, "sm")
+  end
+
+  def button_xs(*params)
+    button(*params, "xs")
+  end
+
 end
 
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true

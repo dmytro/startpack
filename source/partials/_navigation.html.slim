@@ -1,12 +1,15 @@
 h2 Навігація
 ul
-  li
-    a.btn.btn-raised.btn-material-red-800  href="#{base}/" Що це таке?
-  li
-    a.btn.btn-raised.btn-material-red-800  href="#{base}/git_github" Git та Github
-  li
-    a.btn.btn-raised.btn-material-red-800  href="#{base}/static_or" Статична сторінка?
-  li
-    a.btn.btn-raised.btn-material-red-800  href="#{base}/generators" Статичні генератори
-  li
-    a.btn.btn-raised.btn-material-red-800  href="#{base}/jekyll_middleman" Джекіл і Мідмен
+  li= button_l "", "Що це таке?"
+  ul
+    li= button "git_github", "Git та Github"
+
+  li= button_l "static_or", "Статична сторінка?"
+  ul
+    li= button  "generators", "Статичні генератори"
+    li= button "jekyll_middleman", "Джекіл і Мідлмен"
+    ul
+      li= button_s "jekyll-introduction", "Jekyll Introduction (англ.)"
+
+  li= button_l "first_steps", "З чого почати?"
+  li= button_l "terminology", "Словничок"
