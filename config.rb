@@ -46,6 +46,13 @@ helpers do
     button(*params, "xs")
   end
 
+  def image_caption(image, text)
+    %{<figure>
+      #{image_tag image}
+      <figcaption> #{text} </figcaption>
+   </figure>}
+  end
+
 end
 
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true

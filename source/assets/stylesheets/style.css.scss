@@ -119,3 +119,42 @@ section{
         font-weight: bold;
     }
 }
+
+figure {
+    display: block;
+    padding-left: 3em;
+    padding-bottom: 2ex;
+    figcaption {
+        font-family: cursive, serif;
+        text-indent: -2em;
+        font-style: italic;
+        font-size: 105%;
+        margin-top: 1ex;
+        margin-bootom: 2ex;
+        &:before {
+            content: "Мал.: ";
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    padding-top: 2ex;
+    border-top: 1px solid #FFF;
+    background-color: #aaa;
+    .fa-social {
+        color: #666;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .fa-inverse {
+        color: #AAA;
+    }
+    .fa-small {
+        font-size: 70%;
+    }
+    .row:first-child {
+        padding-left: 3ex;
+    }
+}
