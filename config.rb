@@ -19,15 +19,25 @@ activate :livereload
 activate :directory_indexes
 
 
+
 helpers do
   def chapters( post )
-    File.readlines( post.source_file ).collect do |x|
+    headers = File.readlines( post.source_file ).collect do |x|
       if x =~ /^\#{1,6}\s(.*)/
         $1
       else
         nil
       end
-    end.select { |x| x }
+    end.compact
+
+    case markdown_engine
+    when :redcarpet
+      headers.map { |x| [x, x.downcase.gsub( /\s/, "-" )] }
+    when :kramdown
+      headers.each_with_index.map { |x,i| [x,i == 0 ? "section" : "section-#{i}"] }
+    else
+      []
+    end
   end
 
   def button(href,text,size='dummy')
@@ -55,8 +65,15 @@ helpers do
 
 end
 
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
-set :markdown_engine, :redcarpet
+# set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true, smart: true
+# set :markdown_engine, :redcarpet
+
+set :markdown_engine, :kramdown
+set :markdown, :layout_engine => :erb,
+               :tables => true,
+               :autolink => true,
+               :smartypants => true,
+               smart_quotes: [171, 187, 8222, 8220]
 
 configure :development do
   set :base, ""
