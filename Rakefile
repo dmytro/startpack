@@ -18,7 +18,4 @@ namespace :generate do
     File.open(source,"w") { |f| f.print lines.join; f.close }
   end
 
-  desc "Generate ID spans for dictionary entries"
-  task :quotes do
-  end
 end
