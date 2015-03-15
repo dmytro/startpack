@@ -70,10 +70,11 @@ end
 
 set :markdown_engine, :kramdown
 set :markdown, :layout_engine => :erb,
-               :tables => true,
-               :autolink => true,
-               :smartypants => true,
-               smart_quotes: [171, 187, 8222, 8220]
+  :tables => true,
+  :autolink => true,
+  footnotes: true,
+  :smartypants => true,
+  smart_quotes: [171, 187, 8222, 8220]
 
 configure :development do
   set :base, ""
