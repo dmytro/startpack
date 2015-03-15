@@ -74,7 +74,7 @@ set :markdown, :layout_engine => :erb,
   :autolink => true,
   footnotes: true,
   :smartypants => true,
-  smart_quotes: [171, 187, 8222, 8220]
+  smart_quotes: [180, 180, 8222, 8220]
 
 configure :development do
   set :base, ""
