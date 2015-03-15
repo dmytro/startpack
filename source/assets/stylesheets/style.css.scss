@@ -174,3 +174,18 @@ footer {
         padding-left: 3ex;
     }
 }
+
+.footnotes {
+    ol:first-child {
+        margin-top: 2em;
+        padding-top: 2ex;
+        border-top: 3px solid #bbb;
+    }
+    p {
+        font-style: italic;
+    }
+}
+
+a.footnote {
+    font-weight: bold;
+}
