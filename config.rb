@@ -51,7 +51,7 @@ helpers do
 
   def button(url,text,size='dummy')
 
-    href="#{base}/#{url}/"
+    href="#{base}/#{url}"
     "<li class='#{active_class href}'><a class='btn btn-#{size} btn-raised btn-material-#{button_color(size)}' href='#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
   end
 
@@ -75,7 +75,8 @@ helpers do
   end
 
   def page_active?(url)
-    current_page.url == url
+    puts [">>", current_page.url, url]
+    current_page.url.include? url
   end
 
   def active_class(url)
