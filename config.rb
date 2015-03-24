@@ -40,8 +40,19 @@ helpers do
     end
   end
 
-  def button(href,text,size='dummy')
-    "<a class='btn btn-#{size} btn-raised btn-material-red-800' href='#{base}/#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
+  def button_color(size)
+    case size
+    when "lg"; then "red-800"
+    when "sm"; then "red-400"
+    when "xs"; then "red-200"
+    else "red-600"
+    end
+  end
+
+  def button(url,text,size='dummy')
+
+    href="#{base}/#{url}/"
+    "<li class='#{active_class href}'><a class='btn btn-#{size} btn-raised btn-material-#{button_color(size)}' href='#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
   end
 
   def button_l(*params)
@@ -63,6 +74,14 @@ helpers do
    </figure>}
   end
 
+  def page_active?(url)
+    current_page.url == url
+  end
+
+  def active_class(url)
+    return "active" if page_active?(url)
+    ""
+  end
 end
 
 # set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true, smart: true

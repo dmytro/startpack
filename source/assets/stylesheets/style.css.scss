@@ -70,6 +70,13 @@ header {
     }
 
     ul {
+        li.active ul {
+                display: block;
+        }
+        li ul {
+            display: none;
+        }
+
         padding-left: 1ex;
         padding-right: 2ex;
         > li {
