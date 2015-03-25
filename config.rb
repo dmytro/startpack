@@ -42,14 +42,14 @@ helpers do
 
   def button_color(size)
     case size
-    when "lg"; then "red-800"
-    when "sm"; then "red-400"
-    when "xs"; then "red-200"
+    when "lg"; then "red-900"
+    when "sm"; then "red-500"
+    when "xs"; then "red-400"
     else "red-600"
     end
   end
 
-  def button(url, text, size: 'dummy', include:[])
+  def button(url, text, size: 'normal', include:[])
 
     href="#{base}/#{url}"
     urls = include << url
