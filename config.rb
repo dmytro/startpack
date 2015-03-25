@@ -49,22 +49,22 @@ helpers do
     end
   end
 
-  def button(url,text,size='dummy')
-
+  def button(url, text, size: 'dummy', include:[])
     href="#{base}/#{url}"
-    "<li class='#{active_class href}'><a class='btn btn-#{size} btn-raised btn-material-#{button_color(size)}' href='#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
+    urls = include << url
+    "<li class='#{active_class urls}'><a class='btn btn-#{size} btn-raised btn-material-#{button_color(size)}' href='#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
   end
 
-  def button_l(*params)
-    button(*params, "lg")
+  def button_l(*params, **rest)
+    button(*params, size: "lg", **rest)
   end
 
-  def button_s(*params)
-    button(*params, "sm")
+  def button_s(*params, **rest)
+    button(*params, size: "sm", **rest)
   end
 
-  def button_xs(*params)
-    button(*params, "xs")
+  def button_xs(*params, **rest)
+    button(*params, size: "xs", **rest)
   end
 
   def image_caption(image, text)
@@ -74,14 +74,15 @@ helpers do
    </figure>}
   end
 
-  def page_active?(url)
-    puts [">>", current_page.url, url]
-    current_page.url.include? url
+  def page_active?(urls)
+    urls.each do |url|
+      return true if current_page.url.split("/").last == url.split("/").last
+    end
+    false
   end
 
   def active_class(url)
-    return "active" if page_active?(url)
-    ""
+    "active" if page_active?(url)
   end
 end
 

@@ -1,10 +1,11 @@
 h2 Навігація
 ul
-  = button_l "", "Що це таке?"
+  /--------------------------------------------
+  = button_l "", "Що це таке?", include: %w{git_github}
   ul
     = button "git_github", "Git та Github"
-
-  = button_l "static_or", "Статична сторінка?"
+  /--------------------------------------------
+  = button_l "static_or", "Статична сторінка?", include: %w{generators jekyll_middleman jekyll-introduction middleman_introduction}
   ul
     = button  "generators", "Статичні генератори"
     = button "jekyll_middleman", "Джекіл і Мідлмен"
@@ -12,8 +13,12 @@ ul
       = button_s "jekyll-introduction", "Jekyll Introduction (англ.)"
       = button_s "middleman_introduction", "Коротко про Мідлмен"
 
-  = button_l "open_project", "Відкритий проект?"
+  /--------------------------------------------
+  = button_l "open_project", "Відкритий проект?", include: %w{big_companies}
   ul
     = button  "big_companies", "Відкритість --- для лузерів!"
+  /--------------------------------------------
   = button_l "first_steps", "З чого почати?"
+  /--------------------------------------------
   = button_l "dict", "Словничок"
+  /--------------------------------------------
