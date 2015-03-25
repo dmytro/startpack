@@ -50,20 +50,34 @@ helpers do
   end
 
   def button(url, text, size: 'dummy', include:[])
+
     href="#{base}/#{url}"
     urls = include << url
-    "<li class='#{active_class urls}'><a class='btn btn-#{size} btn-raised btn-material-#{button_color(size)}' href='#{href}'>#{text}<div class='ripple-wrapper'></div></a>"
+    active = active_class urls
+    color = button_color(size)
+    current = page_active?(url) ? 'current' : ''
+
+    %Q{
+     <li class='#{active}'>
+     <a class='#{current} btn btn-#{size} btn-raised btn-material-#{color}' href='#{href}'>#{text}
+     <div class='ripple-wrapper'></div>
+     </a>
+    }
   end
 
-  def button_l(*params, **rest)
+  def nav(*params, **rest)
     button(*params, size: "lg", **rest)
   end
 
-  def button_s(*params, **rest)
+  def nav2(*params, **rest)
+    button(*params, **rest)
+  end
+
+  def nav3(*params, **rest)
     button(*params, size: "sm", **rest)
   end
 
-  def button_xs(*params, **rest)
+  def nav4(*params, **rest)
     button(*params, size: "xs", **rest)
   end
 
@@ -75,7 +89,7 @@ helpers do
   end
 
   def page_active?(urls)
-    urls.each do |url|
+    Array(urls).each do |url|
       return true if current_page.url.split("/").last == url.split("/").last
     end
     false
