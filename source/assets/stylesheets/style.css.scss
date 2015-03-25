@@ -69,6 +69,24 @@ header {
         text-align: center;
     }
 
+    a.current {
+        white-space: nowrap;
+        display: block;
+
+
+        &:after {
+            position:absolute;
+            top:-20px;
+            right: -50px;
+            content: "";
+	        width: 0;
+	        height: 0;
+	        border-top: 40px solid transparent;
+	        border-right: 40px solid rgb(238, 238, 238);;
+	        border-bottom: 40px solid transparent;
+
+        }
+    }
     ul {
         li.active ul {
             display: block;
