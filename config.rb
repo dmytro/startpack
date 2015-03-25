@@ -49,10 +49,10 @@ helpers do
     end
   end
 
-  def button(url, text, size: 'normal', include:[])
+  def button(url, text, size: 'normal', expand_too:[])
 
     href="#{base}/#{url}"
-    urls = include << url
+    urls = expand_too << url
     active = active_class urls
     color = button_color(size)
     current = page_active?(url) ? 'current' : ''
