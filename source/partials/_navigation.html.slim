@@ -1,22 +1,23 @@
 h2 Навігація
 ul
   /--------------------------------------------
-  = nav "", "Що це таке?", include: %w{git_github}
+  = nav "", "Що це таке?", include: %w{static_or open_project big_companies}
+  ul
+    = nav2 "static_or", "Статична сторінка?"
+    = nav2 "open_project", "Відкритий проект?", include: %w{big_companies}
+    ul
+      = nav3  "big_companies", "Відкритість для лузерів !"
+  /--------------------------------------------
+  = nav "tools", "Технічні засоби", include: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction}
   ul
     = nav2 "git_github", "Git та Github"
-  /--------------------------------------------
-  = nav "static_or", "Статична сторінка?", include: %w{generators jekyll_middleman jekyll-introduction middleman_introduction}
-  ul
     = nav2  "generators", "Статичні генератори"
-    = nav2 "jekyll_middleman", "Джекіл і Мідлмен"
     ul
-      = nav3 "jekyll-introduction", "Jekyll Introduction (англ.)"
-      = nav3 "middleman_introduction", "Коротко про Мідлмен"
+      = nav3 "jekyll_middleman", "Джекіл і Мідлмен"
+      ul
+        = nav4 "jekyll-introduction", "Jekyll Introduction (англ.)"
+        = nav4 "middleman_introduction", "Коротко про Мідлмен"
 
-  /--------------------------------------------
-  = nav "open_project", "Відкритий проект?", include: %w{big_companies}
-  ul
-    = nav2  "big_companies", "Відкритість --- для лузерів!"
   /--------------------------------------------
   = nav "first_steps", "З чого почати?"
   /--------------------------------------------
