@@ -39,6 +39,14 @@ html[lang="en"]
           .col-md-3
             | &nbsp;
 
+    .container-fluid
+      .row
+
+        h4 Коментарі
+        .col-md-6.col-md-offset-3
+          = disqus
+          = disqus_count
+
   = partial :footer
 
     a.btn.btn-fab.btn-material-red-800.btn-raised#toTop href="#"

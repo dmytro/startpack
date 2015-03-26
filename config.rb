@@ -20,6 +20,10 @@ activate :livereload
 
 activate :directory_indexes
 
+activate :disqus do |d|
+  d.shortname = 'startpack' # Replace with your Disqus shortname.
+end
+
 
 
 helpers do
