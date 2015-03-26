@@ -8,9 +8,11 @@ ul
     ul
       = nav3  "big_companies"
   /--------------------------------------------
-  = nav "tools", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction}
+  = nav "tools", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction github_pages}
   ul
     = nav2 "git_github"
+    ul
+      = nav3 "github_pages"
     = nav2  "generators"
     ul
       = nav3 "jekyll_middleman"
