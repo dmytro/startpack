@@ -2,6 +2,8 @@
 require 'slim'
 Slim::Engine.disable_option_validator!
 
+require 'pry'
+
 I18n.enforce_available_locales = true
 # general settings
 set :encoding, 'utf-8'
@@ -21,6 +23,7 @@ activate :directory_indexes
 
 
 helpers do
+
   def chapters( post )
     headers = File.readlines( post.source_file ).collect do |x|
       if x =~ /^\#{1,6}\s(.*)/
@@ -29,6 +32,7 @@ helpers do
         nil
       end
     end.compact
+
 
     case markdown_engine
     when :redcarpet

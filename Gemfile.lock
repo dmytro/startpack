@@ -95,6 +95,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-pry (0.0.4)
+      middleman-core (~> 3.2)
+      pry (~> 0.9)
     middleman-sprockets (3.4.2)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -170,6 +173,7 @@ DEPENDENCIES
   html2slim
   middleman (~> 3.3.10)
   middleman-livereload
+  middleman-pry
   oj
   redcarpet
   rmagick (~> 2.3)
