@@ -7,6 +7,7 @@ gem "middleman-disqus"
 # gem 'middleman-sprockets', '~> 3.2.0'
 gem "html2slim"
 gem "slim"
+gem 'middleman-minify-html'
 
 # gem 'sprockets-less'
 # gem 'sprockets-sass'
