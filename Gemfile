@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'middleman', '~>3.2.0'
-
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'middleman', '~>3.3.10'
+gem 'middleman-pry'
+gem 'middleman-livereload' #, '~> 3.1.0'
 # gem 'middleman-sprockets', '~> 3.2.0'
 gem "html2slim"
 gem "slim"

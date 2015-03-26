@@ -1,8 +1,10 @@
 ---
 layout: layout
-title:  Що таке Git та Github?
+title:  Git та Github
 
 ---
+
+# Що таке Git та Github?
 
 Дві основні складові на вершині списку, це Git та Github.
 

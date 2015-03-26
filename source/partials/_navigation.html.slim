@@ -3,25 +3,25 @@ ul
   /--------------------------------------------
   = nav "", "Що це таке?", expand_too: %w{static_or open_project big_companies}
   ul
-    = nav2 "static_or", "Статична сторінка?"
-    = nav2 "open_project", "Відкритий проект?", expand_too: %w{big_companies}
+    = nav2 "static_or"
+    = nav2 "open_project", expand_too: %w{big_companies}
     ul
-      = nav3  "big_companies", "Відкритість для лузерів !"
+      = nav3  "big_companies"
   /--------------------------------------------
-  = nav "tools", "Технічні засоби", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction github_pages}
+  = nav "tools", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction github_pages}
   ul
-    = nav2 "git_github", "Git та Github"
+    = nav2 "git_github"
     ul
-      = nav3 "github_pages", "Сторінки Github"
-    = nav2  "generators", "Статичні генератори"
+      = nav3 "github_pages"
+    = nav2  "generators"
     ul
-      = nav3 "jekyll_middleman", "Джекіл і Мідлмен"
+      = nav3 "jekyll_middleman"
       ul
-        = nav4 "jekyll-introduction", "Jekyll Introduction (англ.)"
-        = nav4 "middleman_introduction", "Коротко про Мідлмен"
+        = nav4 "jekyll-introduction"
+        = nav4 "middleman_introduction"
 
   /--------------------------------------------
-  = nav "first_steps", "З чого почати?"
+  = nav "first_steps"
   /--------------------------------------------
-  = nav "dict", "Словничок"
+  = nav "dict"
   /--------------------------------------------
