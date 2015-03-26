@@ -8,9 +8,11 @@ ul
     ul
       = nav3  "big_companies", "Відкритість для лузерів !"
   /--------------------------------------------
-  = nav "tools", "Технічні засоби", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction}
+  = nav "tools", "Технічні засоби", expand_too: %w{git_github generators jekyll_middleman jekyll-introduction middleman_introduction github_pages}
   ul
     = nav2 "git_github", "Git та Github"
+    ul
+      = nav3 "github_pages", "Сторінки Github"
     = nav2  "generators", "Статичні генератори"
     ul
       = nav3 "jekyll_middleman", "Джекіл і Мідлмен"
