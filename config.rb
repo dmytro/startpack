@@ -49,7 +49,9 @@ helpers do
     end
   end
 
-  def button(url, text, size: 'normal', expand_too:[])
+  def button(url, title=nil, size: 'normal', expand_too:[])
+
+    title = title || sitemap.resources.find { |x| x.path =~ /#{url}/ }.data.title
 
     href="#{base}/#{url}"
     urls = expand_too << url
@@ -59,7 +61,7 @@ helpers do
 
     %Q{
      <li class='#{active}'>
-     <a class='#{current} btn btn-#{size} btn-raised btn-material-#{color}' href='#{href}'>#{text}
+     <a class='#{current} btn btn-#{size} btn-raised btn-material-#{color}' href='#{href}'>#{title}
      <div class='ripple-wrapper'></div>
      </a>
     }

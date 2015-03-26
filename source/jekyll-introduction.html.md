@@ -1,4 +1,5 @@
 ---
+title: Jekyll Introduction (англ.)
 layout: layout
 category : lessons
 tagline: "Supporting tagline"
