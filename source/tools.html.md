@@ -7,7 +7,7 @@ title: Технічні засоби
 Деякі з технічних засобів використаних в даному проекті:
 
 - Git, Github та Github Pages
-- Lekyll та Middleman
+- Jekyll та Middleman
 - Twitter Bootstrap 3
 - Font Awesome
 - Markdown
