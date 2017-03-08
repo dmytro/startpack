@@ -1,7 +1,13 @@
 REMOTE="origin"
+REMOTE_V="git@github.com:dmytro/startpack.git"
 SOURCE_BRANCH="master"
 PUBLISH_BRANCH="gh-pages"
 DATE=Time.now.strftime("%Y/%m/%d %H:%M")
+
+desc "Create build directory and gh-pages branch."
+task :setup do
+  sh "[ -d build ] || git clone -b #{PUBLISH_BRANCH} #{REMOTE_V} build"
+end
 
 desc "compile and publish the site to Github"
 task :publish do
